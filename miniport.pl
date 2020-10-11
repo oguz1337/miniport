@@ -46,7 +46,7 @@ foreach ($port = $start_port ; $port <= $end_port ; $port++)
 	}
 }
 
-print "\n\nScan Bitmiştir Açık Olan Portlar Üstte Çıkmıştır - SyberCodeV\n";
+print "\n\nScan Bitmiştir Açık Olan Portlar Üstte Çıkmıştır - SyberCodeV1\n";
 
 exit (0);
 
