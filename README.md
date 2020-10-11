@@ -54,3 +54,4 @@ usage: perl miniport.pl
 
 
 Donate Bitcoin! :3AHgAdH9mYY14uig3CPtTiZWndGTNCXsHD
+# donate Payerr {€,$}:P1027591203
