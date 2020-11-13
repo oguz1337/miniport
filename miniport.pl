@@ -15,14 +15,14 @@ print q{
  |_|  |_|_|_| |_|_|_|   \___/|_|   \__|
      Coder: SyberCodeV1 & GrayTurkish
 };
-print "İp Adresini gir : ";
+print "Enter ip adress : ";
 
 
 chop ($target = <stdin>);
-print "Başlayacak Port Sayısını Gir : ";
+print "Enter the number to start : ";
 chop ($start_port = <stdin>);
 &check_port($start_port);
-print "Biticek Port Sayısını Gir : ";
+print "Enter the number to end : ";
 chop ($end_port = <stdin>);
 &check_port($end_port);
 
@@ -30,7 +30,7 @@ chop ($end_port = <stdin>);
 foreach ($port = $start_port ; $port <= $end_port ; $port++) 
 {
 
-	print "\rScan Başladı $port";
+	print "\rScan started! $port";
 	
 
 	$socket = IO::Socket::INET->new(PeerAddr => $target , PeerPort => $port , Proto => 'tcp' , Timeout => 1);
@@ -46,7 +46,7 @@ foreach ($port = $start_port ; $port <= $end_port ; $port++)
 	}
 }
 
-print "\n\nScan Bitmiştir Açık Olan Portlar Üstte Çıkmıştır - SyberCodeV1\n";
+print "\n\nScan finished open ports are mentioned above ~SyberCodeV1\n";
 
 exit (0);
 
@@ -54,7 +54,7 @@ sub check_port {
     my $port = shift;
 
     if ($port =~ /\D+/ or $port > 65535 or $port < 0) {
-        print "Lütfen Port Formatını Kontrol edin:: $port\n";
+        print "Please enter the correct port format : $port\n";
         exit 1;
     }
 }
